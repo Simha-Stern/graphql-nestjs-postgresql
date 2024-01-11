@@ -1,0 +1,42 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserType {
+  id: String!
+  email: String!
+  password: String!
+  name: String!
+  phone: String!
+  active: Boolean!
+  manager: Boolean!
+}
+
+type Query {
+  findAll: [UserType!]!
+  findOne(id: Int!): UserType!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): UserType!
+  updateUser(updateUserInput: UpdateUserInput!, id: Int!): UserType!
+  removeUser(id: Int!): UserType!
+}
+
+input CreateUserInput {
+  email: String!
+  password: String!
+  name: String!
+  phone: String!
+  active: Boolean!
+  manager: Boolean!
+}
+
+input UpdateUserInput {
+  email: String
+  password: String
+  name: String
+  phone: String
+  active: Boolean
+  manager: Boolean
+}
